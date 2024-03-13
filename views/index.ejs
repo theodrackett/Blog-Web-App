@@ -1,0 +1,36 @@
+<%- include("./partials/header.ejs") %>
+    <h1>We be bloggin, we be bloggin yeah!</h1>
+    <h2>I wanna blog with you</h2>
+    <div class="embody">
+
+    <% if (locals.blogs) { %>
+        <div class="blogs-div">
+
+            <% blogs.forEach((blog) => { %>
+                <div class="card-div">
+                    <div class="textarea-div">
+                        <textarea class="blog-card" name="blog-card" id="blog-area" cols="30" rows="10"><%= blog %></textarea>
+                    </div>
+                    <div class="edit-del-buttons">
+                        <form class="edit-button buttons" action="/edit" method="post">
+                            <input type="submit" value="Edit">
+                        </form>
+                        <form class="delete-button buttons" action="/delete" method="post">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </div>
+                </div>
+                <hr>
+            <% }) %>
+            </div>
+
+    <% } else { %> 
+            <form class="blog-button create-blog" action="/create" method="post">
+                <input type="submit" value="Create blog">
+            </form>
+    <% } %> 
+    <form class="create-button buttons" action="/create" method="get">
+        <input type="submit" value="Create blog">
+    </form>
+</div>
+<%- include("./partials/footer.ejs") %>
