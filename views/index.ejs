@@ -12,11 +12,11 @@
                         <textarea class="blog-card" name="blog-card" id="blog-area" cols="30" rows="10"><%= blog %></textarea>
                     </div>
                     <div class="edit-del-buttons">
-                        <form class="edit-button buttons" action="/edit" method="post">
-                            <input type="submit" value="Edit">
+                        <form class="edit-button" action="/edit" method="post">
+                            <input type="submit" class="buttons" value="Edit">
                         </form>
-                        <form class="delete-button buttons" action="/delete" method="post">
-                            <input type="submit" value="Delete">
+                        <form class="delete-button" action="/delete" method="post">
+                            <input type="submit" class="buttons" value="Delete">
                         </form>
                     </div>
                 </div>
@@ -29,8 +29,8 @@
                 <input type="submit" value="Create blog">
             </form>
     <% } %> 
-    <form class="create-button buttons" action="/create" method="get">
-        <input type="submit" value="Create blog">
+    <form class="create-button" action="/create" method="get">
+        <input type="submit" class="buttons" value="Create blog">
     </form>
 </div>
 <%- include("./partials/footer.ejs") %>
