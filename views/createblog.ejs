@@ -1,8 +1,8 @@
 <%- include("./partials/header.ejs") %>
-    <div>
+    <div class="create-blog-div textarea-div">
         <form class="create-blog" action="/create" method="post">
-            <textarea class="blog-card" name="blog-card" cols="30" rows="10"></textarea>
-            <input type="submit" value="Submit">
+            <textarea class="blog-card" name="blog" cols="30" rows="10"></textarea>
+            <input  type="submit" class="submit-button buttons" value="Submit">
         </form>
     </div>
 <%- include("./partials/footer.ejs") %>
